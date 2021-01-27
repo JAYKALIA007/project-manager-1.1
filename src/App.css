@@ -1,38 +1,115 @@
-.App {
+.navbarComponent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: minmax(90px, auto);
+  grid-template-areas: "poster poster poster poster poster authStatus authStatus authStatus ";
+  background: #303336;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 15px #2f3133, -10px -10px 15px rgb(48, 42, 42);
+  color: antiquewhite;
+}
+.dashBoard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: "DashBoard DashBoard DashBoard DashBoard DashBoard DashBoard DashBoard DashBoard";
+}
+.navbarComponent div {
+  display: inline;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poster {
+  grid-area: poster;
+  padding: 15px;
+  text-align: center;
+  color: antiquewhite;
+  /* transition: transform 0.5s ease; */
+}
+/* .poster:hover {
+  text-decoration: underline;
+  cursor: pointer;
+ transform: scale(1.03); 
+} */
+span {
+  font-size: 2.5rem;
+  animation: type 3s steps(19);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: consolas;
+  border-right: 4px solid rgb(209, 202, 202);
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 19ch;
+  }
+}
+
+.authStatus {
+  grid-area: authStatus;
+}
+.authStatus div {
+  font-size: 1.2em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.authStatus div:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li {
+  display: inline;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul li * {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0px 25px;
 }
-
-.App-link {
-  color: #61dafb;
+ul li *:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nameIcon {
+  background-color: rgb(223, 84, 130);
+  border: 5px solid rgb(223, 84, 130);
+  margin: 0px 10px;
+  border-radius: 20%;
+}
+.dashboardComponent {
+  grid-area: DashBoard;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: "projectList About";
+}
+.aboutComponent {
+  font-size: 1.1em;
+  grid-area: About;
+  margin: 40px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background: #ecf0f3;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.projectListComponent {
+  grid-area: projectList;
+  font-size: 1.1em;
+  margin: 40px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #ecf0f3;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  transition: transform 0.5s ease;
+}
+.projectListComponent:hover {
+  transform: scale(1.03);
 }
