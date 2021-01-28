@@ -1,10 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
 class NavBar extends React.Component {
   render() {
-    let loggedIn = true;
+    let loggedIn = false;
     return (
       <div className="navbarComponent">
         <div className="poster">
@@ -28,8 +26,16 @@ class NavBar extends React.Component {
           </div>
         ) : (
           <div className="authStatus">
-            <SignIn />
-            <SignUp />
+            <nav>
+              <ul>
+                <li className="loggedStatus logOut">
+                  <NavLink to="/signup">Sign Up</NavLink>
+                </li>
+                <li className="loggedStatus newProject">
+                  <NavLink to="/signin">Sign In</NavLink>
+                </li>
+              </ul>
+            </nav>
           </div>
         )}
       </div>
