@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import { NavLink } from "react-router-dom";
 class NavBar extends React.Component {
   render() {
@@ -6,7 +7,18 @@ class NavBar extends React.Component {
     return (
       <div className="navbarComponent">
         <div className="poster">
-          <span>PROJECT MANAGER 1.1 </span>
+          <Typewriter
+            options={{
+              strings: [
+                "PROJECT MANAGER 1.1",
+                "GET IDEAS",
+                "SHARE IDEAS",
+                "STAY UPDATED...",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </div>
         {loggedIn === true ? (
           <div className="authStatus">
