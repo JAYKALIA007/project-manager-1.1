@@ -10,10 +10,10 @@ class NavBar extends React.Component {
           <Typewriter
             options={{
               strings: [
-                "PROJECT MANAGER 1.1",
+                "PROJECT HUB 1.1",
                 "GET IDEAS",
                 "SHARE IDEAS",
-                "STAY UPDATED...",
+                "STAY UPDATED ...",
               ],
               autoStart: true,
               loop: true,

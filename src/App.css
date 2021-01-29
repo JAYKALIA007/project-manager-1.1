@@ -86,13 +86,29 @@ ul li *:hover {
   margin: 40px;
   padding: 10px 30px;
   border-radius: 20px;
-  background: #ecf0f3;
+  /* background: #ecf0f3; */
+  background: #f0f2f3;
   box-sizing: border-box;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 .projectListComponent:hover {
   transform: scale(1.03);
+}
+.projectDetailsComponent {
+  height: 50%;
+  width: 90%;
+  font-size: 1.1em;
+  margin: 40px auto;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #f0f2f3;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 20px #d5d8db, -14px -14px 20px white;
+  transition: transform 0.8s ease;
+}
+.projectDetailsComponent:hover {
+  transform: scale(1.05);
 }
 .formContainer {
   position: relative;
@@ -209,7 +225,7 @@ form:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .navbarComponent {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: minmax(50px, auto);
@@ -268,6 +284,7 @@ form:hover {
     margin: 1;
     height: 70%;
     padding: 20px;
+    width: 70%;
   }
   .brand-logo {
     height: 20%;

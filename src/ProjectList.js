@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProjectSummary from "./ProjectSummary";
 class ProjectList extends React.Component {
   render() {
     const { projects } = this.props;
@@ -9,10 +10,9 @@ class ProjectList extends React.Component {
           <Link
             style={{ textDecoration: "none", color: "black" }}
             to={"/project/" + project.id}
+            key={project.id}
           >
-            <h4>{project.title}</h4>
-            <p>{project.creator}</p>
-            <p>{project.time}</p>
+            <ProjectSummary project={project} />
           </Link>
         </div>
       );
