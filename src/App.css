@@ -76,7 +76,7 @@ ul li *:hover {
   padding: 0;
   background: #303336;
   box-sizing: border-box;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
 }
 .projectListComponent {
   grid-area: projectList;
@@ -220,7 +220,7 @@ form:hover {
     grid-template-areas: "poster poster poster poster poster authStatus authStatus authStatus ";
     background: #303336;
     box-sizing: border-box;
-    box-shadow: 10px 10px 15px #2f3133, -10px -10px 15px rgb(48, 42, 42);
+    /* box-shadow: 10px 10px 15px #2f3133, -10px -10px 15px rgb(48, 42, 42); */
     color: antiquewhite;
   }
 }
