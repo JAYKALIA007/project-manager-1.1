@@ -1,54 +1,21 @@
 import React from "react";
 import ProjectList from "../ProjectList";
 import About from "./About";
+import { connect } from "react-redux";
 class DashBoard extends React.Component {
-  state = {
-    projects: [
-      {
-        title: "title 1",
-        content:
-          "lorem ipsumwheg3tr73ehwjjedhgrfybuhdwijoeduhrfygedwjipdjruhfgyvbiufejdwikdrjfuhyeudjiruhetgiybefjefuhtgyrifj3ftuhruj",
-        firstname: "jay Kalia",
-        secondname: "Kalia",
-        time: "26 Jan",
-        id: 1,
-      },
-      {
-        title: "title 1",
-        content:
-          "lorem ipsumwheg3tr73ehwjjedhgrfybuhdwijoeduhrfygedwjipdjruhfgyvbiufejdwikdrjfuhyeudjiruhetgiybefjefuhtgyrifj3ftuhruj",
-        firstname: "jay Kalia",
-        secondname: "Kalia",
-        time: "26 Jan",
-        id: 2,
-      },
-      {
-        title: "title 1",
-        content:
-          "lorem ipsumwheg3tr73ehwjjedhgrfybuhdwijoeduhrfygedwjipdjruhfgyvbiufejdwikdrjfuhyeudjiruhetgiybefjefuhtgyrifj3ftuhruj",
-        firstname: "jay Kalia",
-        secondname: "Kalia",
-        time: "26 Jan",
-        id: 3,
-      },
-      {
-        title: "title 1",
-        content:
-          "lorem ipsumwheg3tr73ehwjjedhgrfybuhdwijoeduhrfygedwjipdjruhfgyvbiufejdwikdrjfuhyeudjiruhetgiybefjefuhtgyrifj3ftuhruj",
-        firstname: "jay Kalia",
-        secondname: "Kalia",
-        time: "26 Jan",
-        id: 4,
-      },
-    ],
-  };
   render() {
+    // console.log(this.props);
     return (
       <div className="dashboardComponent">
-        <ProjectList projects={this.state.projects} />
+        <ProjectList projects={this.props.projects} />
         <About />
       </div>
     );
   }
 }
-export default DashBoard;
+const mapStateToProps = (state) => {
+  return {
+    projects: state.project.projects,
+  };
+};
+export default connect(mapStateToProps)(DashBoard);
