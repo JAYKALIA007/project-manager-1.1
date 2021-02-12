@@ -7,10 +7,10 @@ class ProjectSummary extends React.Component {
         <h4>{this.props.project.title}</h4>
         <p>
           {/* {this.props.project.content} */}
-          Posted by: {this.props.project.firstname}{" "}
-          {this.props.project.lastname}
+          Posted by: {this.props.project.authorFirstName}{" "}
+          {this.props.project.authorLastName}
         </p>
-        <p>{this.props.project.time}</p>
+        <p>{this.props.project.createdAt}</p>
       </div>
     );
   }
